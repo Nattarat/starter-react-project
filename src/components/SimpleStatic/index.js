@@ -1,0 +1,1 @@
+export { SimpleStatic } from './SimpleStatic'

@@ -1,0 +1,81 @@
+/*
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Fonts (embed)
+// * Prompt
+//   - Prompt Regular
+//   - Prompt Medium
+//   - Prompt Bold
+// * Thonburi
+//   - Regular
+//   - Bold
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+/*
+// Prompt
+// ============================================================
+*/
+
+/* Regular */
+@font-face {
+  font-family: 'Prompt-Regular';
+  src: url('../fonts/prompt/prompt-regular.eot');
+  src: url('../fonts/prompt/prompt-regular.eot') format('embedded-opentype'),
+       url('../fonts/prompt/prompt-regular.woff') format('woff'),
+       url('../fonts/prompt/prompt-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'Prompt-Medium';
+  src: url('../fonts/prompt/prompt-medium.eot');
+  src: url('../fonts/prompt/prompt-medium.eot') format('embedded-opentype'),
+       url('../fonts/prompt/prompt-medium.woff') format('woff'),
+       url('../fonts/prompt/prompt-medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Prompt-Bold';
+  src: url('../fonts/prompt/prompt-bold.eot');
+  src: url('../fonts/prompt/prompt-bold.eot') format('embedded-opentype'),
+       url('../fonts/prompt/prompt-bold.woff') format('woff'),
+       url('../fonts/prompt/prompt-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+// Thonburi
+// ============================================================
+*/
+
+/* Regular */
+@font-face {
+  font-family: 'Thonburi-Regular';
+  src: url('../fonts/thonburi/thonburi-regular.eot');
+  src: url('../fonts/thonburi/thonburi-regular.eot') format('embedded-opentype'),
+       url('../fonts/thonburi/thonburi-regular.woff') format('woff'),
+       url('../fonts/thonburi/thonburi-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Thonburi-Bold';
+  src: url('../fonts/thonburi/thonburi-bold.eot');
+  src: url('../fonts/thonburi/thonburi-bold.eot') format('embedded-opentype'),
+       url('../fonts/thonburi/thonburi-bold.woff') format('woff'),
+       url('../fonts/thonburi/thonburi-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
