@@ -90,16 +90,19 @@ export class SimpleStatic extends React.PureComponent {
 
 SimpleStatic.propTypes = { // TYPE > node, string, func, bool
   /**
-   * State/Modifier classname for change default UI:
-   *
-   * is-error, is-success, is-special
+   * State/Modifier classname for change default UI
   */
-  className: PropTypes.string,
+  className: PropTypes.oneOf([
+    'is-error',
+    'is-success'
+  ]),
   /** Additional element in component */
-  children: PropTypes.node
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.string
+  ])
 }
 
 SimpleStatic.defaultProps = {
-  className: '',
-  children: ''
+  // PROPS_NAME: ''
 }

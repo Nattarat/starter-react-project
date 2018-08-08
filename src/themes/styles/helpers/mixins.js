@@ -9,7 +9,7 @@ import {
 // * Placeholder
 //
 // Using default:
-// ${ MIXINS.PLACEHOLDER({}) };
+// ${MIXINS.PLACEHOLDER({});
 //
 // Using parameters:
 // ${MIXINS.PLACEHOLDER({

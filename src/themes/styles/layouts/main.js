@@ -11,15 +11,16 @@ import {
 //   default as MIXINS
 // } from 'themes/styles/helpers/mixins'
 // import {
-//   default as PROPS
-// } from 'themes/styles/helpers/props'
+//   default as UTILITIES
+// } from 'themes/styles/helpers/utilities'
 // import {
 //   CONTENTS,
 //   ICONS,
 //   LOGOS,
 //   SHAREDS,
 //   VIDEOS,
-//   AUDIOS
+//   AUDIOS,
+//   DOCUMENTS
 // } from 'themes'
 
 // //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -27,7 +28,6 @@ import {
 //
 // Global style
 // * Sample structure class
-// * React slick
 //
 // ==================================================================================================
 // //////////////////////////////////////////////////////////////////////////////////////////////////

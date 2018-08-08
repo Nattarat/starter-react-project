@@ -4,7 +4,7 @@ import styled from 'styled-components'
 //   VARIABLES,
 //   TYPOGRAPHYS,
 //   // MIXINS,
-//   // PROPS
+//   // UTILITIES
 // } from '../../themes'
 
 // Use relative path for React Styleguidist
@@ -14,12 +14,12 @@ import {
 import {
   default as TYPOGRAPHYS
 } from '../../themes/styles/bases/typographys'
-// export {
+// import {
 //   default as MIXINS
 // } from '../../themes/styles/helpers/mixins'
-// export {
-//   default as PROPS
-// } from '../../themes/styles/helpers/props'
+// import {
+//   default as UTILITIES
+// } from '../../themes/styles/helpers/utilities'
 
 // Wrapper
 // ============================================================

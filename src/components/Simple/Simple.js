@@ -52,28 +52,40 @@ export class Simple extends React.PureComponent {
 
 Simple.propTypes = { // TYPE > node, string, func, bool
   /**
-   * State/Modifier classname for change default UI:
-   *
-   * is-error, is-success, is-special
+   * State/Modifier classname for change default UI
   */
-  className: PropTypes.string,
+  className: PropTypes.oneOf([
+    'is-error',
+    'is-success',
+    'is-special-message'
+  ]),
   /** Heading */
-  heading: PropTypes.string,
+  heading: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.string
+  ]),
   /** Description */
-  description: PropTypes.string,
+  description: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.string
+  ]),
   /** Footer */
-  footer: PropTypes.node,
-  /** Special message (show when className='is-special') */
-  specialMessage: PropTypes.string,
+  footer: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.string
+  ]),
+  /** Special message (show when className='is-special-message') */
+  specialMessage: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.string
+  ]),
   /** Additional element at bottom of Footer */
-  children: PropTypes.node
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.string
+  ])
 }
 
 Simple.defaultProps = {
-  className: '',
-  heading: '',
-  description: '',
-  footer: '',
-  specialMessage: '',
-  children: ''
+  // PROPS_NAME: ''
 }

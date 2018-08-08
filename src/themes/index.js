@@ -14,6 +14,7 @@ export const LOGOS = importAll(require.context('./images/logos', false, /\.(png|
 export const SHAREDS = importAll(require.context('./images/shareds', false, /\.(png|jpe?g|gif|svg)$/))
 export const VIDEOS = importAll(require.context('./videos', false, /\.(mp4)$/))
 export const AUDIOS = importAll(require.context('./audios', false, /\.(mp3)$/))
+export const DOCUMENTS = importAll(require.context('./documents', false, /\.(pdf|doc|docx|xls|xlsx|ppt|pptx|txt)$/))
 
 // Styles
 // ============================================================
@@ -27,5 +28,5 @@ export {
   default as MIXINS
 } from './styles/helpers/mixins'
 export {
-  default as PROPS
-} from './styles/helpers/props'
+  default as UTILITIES
+} from './styles/helpers/utilities'
