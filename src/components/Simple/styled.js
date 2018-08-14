@@ -5,7 +5,7 @@ import styled from 'styled-components'
 //   TYPOGRAPHYS,
 //   // MIXINS,
 //   // UTILITIES
-// } from '../../themes'
+// } from 'themes'
 
 // Use relative path for React Styleguidist
 import {
