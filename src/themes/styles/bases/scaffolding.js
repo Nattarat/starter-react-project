@@ -3,7 +3,7 @@ import {
 } from 'styled-components'
 import {
   default as VARIABLES
-} from './variables'
+} from './variables' // Use relative path for React Styleguidist
 
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 // ==================================================================================================

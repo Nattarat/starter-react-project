@@ -14,52 +14,60 @@ import {
  * - SimpleStatic component description
  */
 
-const SimpleStaticHeader = (props) => {
-  const {
-    children
-  } = props
-
-  return (
-    <SimpleStaticHeaderWrapper className='simplestatic-header'>
-      {children}
-    </SimpleStaticHeaderWrapper>
-  )
+class SimpleStaticHeader extends React.PureComponent {
+  render () {
+    const {
+      children
+    } = this.props
+  
+    return (
+      <SimpleStaticHeaderWrapper className='simplestatic-header'>
+        {children}
+      </SimpleStaticHeaderWrapper>
+    )
+  }
 }
 
-const SimpleStaticBody = (props) => {
-  const {
-    children
-  } = props
-
-  return (
-    <SimpleStaticBodyWrapper className='simplestatic-body'>
-      {children}
-    </SimpleStaticBodyWrapper>
-  )
+class SimpleStaticBody extends React.PureComponent {
+  render () {
+    const {
+      children
+    } = this.props
+  
+    return (
+      <SimpleStaticBodyWrapper className='simplestatic-body'>
+        {children}
+      </SimpleStaticBodyWrapper>
+    )
+  }
 }
 
-const SimpleStaticFooter = (props) => {
-  const {
-    children
-  } = props
-
-  return (
-    <SimpleStaticFooterWrapper className='simplestatic-footer'>
-      {children}
-    </SimpleStaticFooterWrapper>
-  )
+class SimpleStaticFooter extends React.PureComponent {
+  render () {
+    const {
+      children
+    } = this.props
+  
+    return (
+      <SimpleStaticFooterWrapper className='simplestatic-footer'>
+        {children}
+      </SimpleStaticFooterWrapper>
+    )
+  }
 }
 
-const SimpleStaticSpecialMessage = (props) => {
-  const {
-    children
-  } = props
-
-  return (
-    <SimpleStaticSpecialMessageWrapper className='simplestatic-special-message'>
-      {children}
-    </SimpleStaticSpecialMessageWrapper>
-  )
+class SimpleStaticSpecialMessage extends React.PureComponent {
+  render () {
+    const {
+      children
+    } = this.props
+  
+    return (
+      <SimpleStaticSpecialMessageWrapper className='simplestatic-special-message'>
+        {children}
+      </SimpleStaticSpecialMessageWrapper>
+    )
+  }
 }
 
 export class SimpleStatic extends React.PureComponent {
@@ -93,6 +101,7 @@ SimpleStatic.propTypes = { // TYPE > node, string, func, bool
    * State/Modifier classname for change default UI
   */
   className: PropTypes.oneOf([
+    '',
     'is-error',
     'is-success'
   ]),

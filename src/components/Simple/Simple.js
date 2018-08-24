@@ -55,6 +55,7 @@ Simple.propTypes = { // TYPE > node, string, func, bool
    * State/Modifier classname for change default UI
   */
   className: PropTypes.oneOf([
+    '',
     'is-error',
     'is-success',
     'is-special-message'

@@ -9,7 +9,7 @@
 // * Font sizes
 // * Line heights
 // * Letter spacing
-// * Zindexs
+// * Z indexs
 // * Breakpoints
 // * Transitions
 // * Animation timings
@@ -43,82 +43,68 @@ const FONT_SIZES_LG = '48px'
 // const FONT_SIZES_BG = 'px'
 // const FONT_SIZES_HG = 'px'
 // const FONT_SIZES_MS = 'px'
-// Font responsive sizes (compare with design at w375 * h667)
-const FONT_RESPONSIVE_SIZES_MN = '3.25vw' // 12px
-const FONT_RESPONSIVE_SIZES_TN = '3.75vw' // 14px
-const FONT_RESPONSIVE_SIZES_XXS = '4.25vw'  // 16px
-const FONT_RESPONSIVE_SIZES_XS = '4.75vw' // 18px
-const FONT_RESPONSIVE_SIZES_SM = '5.25vw' // 20px
-const FONT_RESPONSIVE_SIZES_MD = '6.5vw' // 24px
-const FONT_RESPONSIVE_SIZES_LG = '12.75vw' // 48px
-// const FONT_RESPONSIVE_SIZES_XL = 'px'
-// const FONT_RESPONSIVE_SIZES_XXL = 'px'
-// const FONT_RESPONSIVE_SIZES_BG = 'px'
-// const FONT_RESPONSIVE_SIZES_HG = 'px'
-// const FONT_RESPONSIVE_SIZES_MS = 'px'
 
 export default {
   // Factors
   // ============================================================
   FACTORS: {
     SPACING: SPACING_FACTOR,
-    LINE_HEIGHT: LINE_HEIGHT_FACTOR,
+    LINE_HEIGHT: LINE_HEIGHT_FACTOR
   },
 
   // Colors
-  // ..
-  // Number is color intensity.
-  // Little number is Lightness.
-  // Big number is Darkness.
   // ============================================================
   COLORS: {
     // Base
+    // ------------------------------
+    // Black/White
     BLACK: '#000000',
     WHITE: '#FFFFFF',
+
+    // Red
     RED: '#FF0000',
+
+    // Green
     GREEN: '#00FF00',
+
+    // Blue
     BLUE: '#0000FF',
 
+    // Gray
+    GRAY_1: '#F7F7F7',
+    GRAY_2: '#CCCCCC',
+
     // Role
+    // ------------------------------
+    // Text
     TEXT_HEAD: '#333333',
     TEXT_SUB_HEAD: '#666666',
     TEXT_DETAIL: '#999999',
     TEXT_LINK: '#006DC9',
     TEXT_PLACEHOLDER: '#AAAAAA',
+
+    // Validation
     VALIDATION_ERROR: '#FF695C',
     VALIDATION_SUCCESS: '#4CFF8D',
 
     // Overlay
-    OVERLAY_1: 'rgba(0, 0, 0, 0.75)',
+    OVERLAY_1: 'rgba(0, 0, 0, 0.75)'
 
     // Specific (for unique color in design)
+    // ------------------------------
   },
 
   // Font families
-  // ..
-  // Conventional Font family name:
-  // ..
-  // First, Second, Third, Fourth, Fifth, ...
-  // ..
-  // Not use Primary, Secondary, Tertiary, Quaternary, Quinary, ...
-  // because long and difficult spelling.
   // ============================================================
   FONT_FAMILIES: {
     FIRST_REGULAR:  'Prompt-Regular',
     FIRST_MEDIUM:   'Prompt-Medium',
     FIRST_BOLD:     'Prompt-Bold',
     SECOND_REGULAR: 'Thonburi-Regular',
-    SECOND_BOLD:    'Thonburi-Bold',
+    SECOND_BOLD:    'Thonburi-Bold'
   },
 
   // Font sizes
-  // ..
-  // Conventional size name:
-  // ..
-  // Mini(MN) < Tiny(TN) <
-  // Extra extra small(XXS) < Extra small(XS) < Small(SM) <
-  // Medium(MD) < Large(LG) < Extra large(XL) < Extra extra large(XXL) <
-  // Big(BG) < Huge(HG) < Massive(MS)
   // ============================================================
   FONT_SIZES: {
     MN:   FONT_SIZES_MN,  // 12px
@@ -127,38 +113,15 @@ export default {
     XS:   FONT_SIZES_XS,  // 18px
     SM:   FONT_SIZES_SM,  // 20px
     MD:   FONT_SIZES_MD,  // 24px
-    LG:   FONT_SIZES_LG,  // 48px
+    LG:   FONT_SIZES_LG   // 48px
     // XL:   FONT_SIZES_XL,  // px
     // XXL:  FONT_SIZES_XXL, // px
     // BG:   FONT_SIZES_BG,  // px
     // HG:   FONT_SIZES_HG,  // px
-    // MS:   FONT_SIZES_MS,  // px
-  },
-
-  // Responsive
-  FONT_RESPONSIVE_SIZES: {
-    MN:   FONT_RESPONSIVE_SIZES_MN,  // 12px
-    TN:   FONT_RESPONSIVE_SIZES_TN,  // 14px
-    XXS:  FONT_RESPONSIVE_SIZES_XXS, // 16px
-    XS:   FONT_RESPONSIVE_SIZES_XS,  // 18px
-    SM:   FONT_RESPONSIVE_SIZES_SM,  // 20px
-    MD:   FONT_RESPONSIVE_SIZES_MD,  // 24px
-    LG:   FONT_RESPONSIVE_SIZES_LG,  // 48px
-    // XL:   FONT_SIZES_XL,  // px
-    // XXL:  FONT_SIZES_XXL, // px
-    // BG:   FONT_SIZES_BG,  // px
-    // HG:   FONT_SIZES_HG,  // px
-    // MS:   FONT_SIZES_MS,  // px
+    // MS:   FONT_SIZES_MS   // px
   },
 
   // Line heights
-  // ..
-  // Conventional size name:
-  // ..
-  // Mini(MN) < Tiny(TN) <
-  // Extra extra small(XXS) < Extra small(XS) < Small(SM) <
-  // Medium(MD) < Large(LG) < Extra large(XL) < Extra extra large(XXL) <
-  // Big(BG) < Huge(HG) < Massive(MS)
   // ============================================================
   LINE_HEIGHTS: {
     MN:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_SIZES_MN})`,   // 16.2px
@@ -167,38 +130,15 @@ export default {
     XS:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_SIZES_XS})`,   // 24.3px
     SM:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_SIZES_SM})`,   // 27px
     MD:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_SIZES_MD})`,   // 32.4px
-    LG:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_SIZES_LG})`,   // 64.8px
+    LG:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_SIZES_LG})`    // 64.8px
     // XL:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_SIZES_XL})`,   // px
     // XXL:  `calc(${LINE_HEIGHT_FACTOR} * ${FONT_SIZES_XXL})`,  // px
     // BG:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_SIZES_BG})`,   // px
     // HG:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_SIZES_HG})`,   // px
-    // MS:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_SIZES_MS})`,   // px
-  },
-
-  // Responsive
-  LINE_RESPONSIVE_HEIGHTS: {
-    MN:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_RESPONSIVE_SIZES_MN})`,   // 16.2px
-    TN:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_RESPONSIVE_SIZES_TN})`,   // 18.9px
-    XXS:  `calc(${LINE_HEIGHT_FACTOR} * ${FONT_RESPONSIVE_SIZES_XXS})`,  // 21.6px
-    XS:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_RESPONSIVE_SIZES_XS})`,   // 24.3px
-    SM:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_RESPONSIVE_SIZES_SM})`,   // 27px
-    MD:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_RESPONSIVE_SIZES_MD})`,   // 32.4px
-    LG:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_RESPONSIVE_SIZES_LG})`,   // 64.8px
-    // XL:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_SIZES_XL})`,   // px
-    // XXL:  `calc(${LINE_HEIGHT_FACTOR} * ${FONT_SIZES_XXL})`,  // px
-    // BG:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_SIZES_BG})`,   // px
-    // HG:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_SIZES_HG})`,   // px
-    // MS:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_SIZES_MS})`,   // px
+    // MS:   `calc(${LINE_HEIGHT_FACTOR} * ${FONT_SIZES_MS})`    // px
   },
 
   // Letter spacing
-  // ..
-  // Conventional size name:
-  // ..
-  // Mini(MN) < Tiny(TN) <
-  // Extra extra small(XXS) < Extra small(XS) < Small(SM) <
-  // Medium(MD) < Large(LG) < Extra large(XL) < Extra extra large(XXL) <
-  // Big(BG) < Huge(HG) < Massive(MS)
   // ============================================================
   LETTER_SPACINGS: {
     // MN:   'px',
@@ -212,7 +152,7 @@ export default {
     // XXL:  'px',
     // BG:   'px',
     // HG:   'px',
-    // MS:   'px',
+    // MS:   'px'
   },
 
   // Zindexs
@@ -227,7 +167,7 @@ export default {
     LV_7: '101',
     LV_8: '999',
     LV_9: '1000',
-    LV_10: '1001',
+    LV_10: '1001'
   },
 
   // Breakpoints
@@ -300,29 +240,22 @@ export default {
     DESKTOP_MD_MIN: '1441px',
     DESKTOP_LG_MIN: '1601px',
     DESKTOP_XL_MIN: '1921px',
-    DESKTOP_XXL_MIN: '2561px',
+    DESKTOP_XXL_MIN: '2561px'
   },
 
   // Transitions
   // ============================================================
   TRANSITIONS: {
-    DEFAULT: 'all 0.3s ease',
+    DEFAULT: 'all 0.3s ease'
   },
 
   // Animation timings
   // ============================================================
   ANIMATION_TIMINGS: {
-    ELASTIC: 'cubic-bezier(.835, -.005, .06, 1)',
+    ELASTIC: 'cubic-bezier(.835, -.005, .06, 1)'
   },
 
   // Border widths
-  // ..
-  // Conventional size name:
-  // ..
-  // Mini(MN) < Tiny(TN) <
-  // Extra extra small(XXS) < Extra small(XS) < Small(SM) <
-  // Medium(MD) < Large(LG) < Extra large(XL) < Extra extra large(XXL) <
-  // Big(BG) < Huge(HG) < Massive(MS)
   // ============================================================
   BORDER_WIDTHS: {
     // MN:   'px',
@@ -336,17 +269,10 @@ export default {
     // XXL:  'px',
     // BG:   'px',
     // HG:   'px',
-    // MS:   'px',
+    // MS:   'px'
   },
 
   // Border radiuses
-  // ..
-  // Conventional size name:
-  // ..
-  // Mini(MN) < Tiny(TN) <
-  // Extra extra small(XXS) < Extra small(XS) < Small(SM) <
-  // Medium(MD) < Large(LG) < Extra large(XL) < Extra extra large(XXL) <
-  // Big(BG) < Huge(HG) < Massive(MS)
   // ============================================================
   BORDER_RADIUSES: {
     // MN:   'px',
@@ -360,13 +286,13 @@ export default {
     // XXL:  'px',
     // BG:   'px',
     // HG:   'px',
-    // MS:   'px',
+    // MS:   'px'
   },
 
   // Box shadows
   // ============================================================
   BOX_SHADOWS: {
-    SHADOW_1: '0 5px 5px rgba(0, 0, 0, .5)',
+    SHADOW_1: '0 5px 5px rgba(0, 0, 0, .5)'
   },
 
   // Component widths
@@ -393,7 +319,7 @@ export default {
     XXL:  `calc(${SPACING_FACTOR} * 9)`,  // 45px
     BG:   `calc(${SPACING_FACTOR} * 10)`, // 50px
     HG:   `calc(${SPACING_FACTOR} * 11)`, // 55px
-    MS:   `calc(${SPACING_FACTOR} * 12)`, // 60px
+    MS:   `calc(${SPACING_FACTOR} * 12)`  // 60px
   },
 
   // Paddings
@@ -407,13 +333,6 @@ export default {
   },
 
   // Grid gutters
-  // ..
-  // Conventional size name:
-  // ..
-  // Mini(MN) < Tiny(TN) <
-  // Extra extra small(XXS) < Extra small(XS) < Small(SM) <
-  // Medium(MD) < Large(LG) < Extra large(XL) < Extra extra large(XXL) <
-  // Big(BG) < Huge(HG) < Massive(MS)
   // ============================================================
   GRID_GUTTERS: {
     // MN:   'px',
@@ -427,6 +346,6 @@ export default {
     // XXL:  'px',
     // BG:   'px',
     // HG:   'px',
-    // MS:   'px',
-  },
+    // MS:   'px'
+  }
 }
