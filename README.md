@@ -477,7 +477,7 @@ my-app
 
 ### Design system: Colors
 * สร้าง Constant เป็น Object ของ Colors
-* โดย Colors จะแบ่งเป็น Category ได้แก่ 
+* โดย Colors จะแบ่งเป็น Category ได้แก่
   - Base: ตั้งชื่อตามสี โดยใช้ Underscore และตัวเลขเป็น Suffix เพื่อบอกถึงความเข้มที่มากขึ้น()
   - Role: ตั้งชื่อสีตามหน้าที่ โดยใช้ Underscore และคำขยายเป็น Suffix เพื่อความเฉพาะจงที่มากขึ้น
   - Specific: ตั้งชื่อสีแบบเฉพาะเจาะจง สำหรับสีที่ไม่ได้ถูกนำไปใช้แบบ Global(ใช้ที่เดียว)
@@ -645,8 +645,8 @@ export default {
 * การสร้าง Component เพื่อนำมาใช้ในโปรเจค โดยใช้ [Styled Components](https://www.styled-components.com) และ [React Styleguidist](https://react-styleguidist.js.org)
 
 ### Stateless and Stateful component
-* แต่ก่อนมีความเชื่อว่าการสร้าง Component แบบ Stateless จะมี Performance ดีกว่า Stateful ซึ่งในปัจจุบันจากการลองใช้งานจริงพบว่าระหว่าง Stateless และ Stateful ไม่ได้มี Performance แตกต่างกันมากนักอย่างที่กังวล จึงตัดสินใจใช้ Stateful แทน Stateless 
-* Stateful มีข้อดีมากกว่า Stateless ตรงที่สามารถใช้ state และ props ได้ ดังนั้นจึงสะดวกต่อ Frontend มากกว่า เนื่องจาก 
+* แต่ก่อนมีความเชื่อว่าการสร้าง Component แบบ Stateless จะมี Performance ดีกว่า Stateful ซึ่งในปัจจุบันจากการลองใช้งานจริงพบว่าระหว่าง Stateless และ Stateful ไม่ได้มี Performance แตกต่างกันมากนักอย่างที่กังวล จึงตัดสินใจใช้ Stateful แทน Stateless
+* Stateful มีข้อดีมากกว่า Stateless ตรงที่สามารถใช้ state และ props ได้ ดังนั้นจึงสะดวกต่อ Frontend มากกว่า เนื่องจาก
   - Frontend จะใช้ state ในการควบคุม UI ผ่าน props ได้เลย
   - สามารถประกาศใช้ Static เพื่อแยกส่วนประกอบภายในของ Component ได้
 
@@ -662,8 +662,8 @@ my-app
 │           └── index.js
 ```
 * Component folder จะตั้งชื่อแบบ Pascal case
-* ภายใน Component folder จะประกอบด้วย 4 ไฟล์ ได้แก่ 
-  1. SimpleStatic.js 
+* ภายใน Component folder จะประกอบด้วย 4 ไฟล์ ได้แก่
+  1. SimpleStatic.js
       - ไฟล์หลักของ Component ใช้ออกแบบโครงสร้าง, state/props, propsType, defaultProps, React Styleguidist(Document description from comments) และ export
   2. styled.js
       - ไฟล์ที่ใช้ Styled Component เพื่อเขียน Style ในรูปแบบ SCSS
@@ -673,13 +673,14 @@ my-app
       - ไฟล์ที่ Export Component ไปใช้งาน
 
 ### How to create component
-1. ดาวน์โหลด [react component template](https://drive.google.com/open?id=181QYpT2YPhwm-icA1Ef5NT7TefMTgGGP) เพื่อใช้เป็นตัวตั้งต้นในการสร้าง Component
-2. แตก zip และนำมาวางไว้ในโฟลเดอร์ components จากนั้น เปลี่ยนชื่อโฟลเดอร์และไฟล์หลักของ Component เป็นชื่อ Component ที่เราต้องการสร้าง(ตัวอย่างจะเปลี่ยนเป็น Card) 
+1. ดาวน์โหลด [react component template](https://drive.google.com/open?id=1EkQQUN7L1i6cnUZMT4SNf6kvcVkHzF7K) เพื่อใช้เป็นตัวตั้งต้นในการสร้าง Component
+2. แตก zip และนำมาวางไว้ในโฟลเดอร์ components จากนั้น เปลี่ยนชื่อโฟลเดอร์และไฟล์หลักของ Component เป็นชื่อ Component ที่เราต้องการสร้าง(ตัวอย่างจะเปลี่ยนเป็น Card)
 ```
 my-app
 ├── src
 │   └── components
 │       └── Card
+│           └── images
 │           └── Card.js
 │           └── styled.js
 │           └── Readme.md
@@ -687,19 +688,19 @@ my-app
 ```
 3. กรณีใช้ VSCode หรือ Text Editor อื่นที่มี Context menu > Find in Folder...
     - Click ขวาที่โฟลเดอร์ Starter เลือก Find in Folder...
-    - Replace ชื่อ Starter ด้วยชื่อ Component ที่เราต้องการสร้าง (ตัวอย่างจะเปลี่ยนเป็น Card) 
+    - Replace ชื่อ Starter ด้วยชื่อ Component ที่เราต้องการสร้าง (ตัวอย่างจะเปลี่ยนเป็น Card)
 4. ดูดีไซน์เพื่อออกแบบโครงสร้างของ Component ดูรายละเอียดที่ [Creation of component](https://docs.google.com/presentation/d/1zSJjdl_ML7RXo_KZxN6TSqHkum_RvfS2uYrpYmDPmYw/edit?usp=sharing)
-    * Main wrapper
+    * Main wrapper (Parent)
       - Wrapper ที่คลุมส่วนประกอบ 'ทั้งหมด' ของ Component
       - มี props 'className' คอยควบคุม UI ผ่าน state ที่ส่งเข้ามา
-    * Minor wrapper
+    * Minor wrapper (Children)
       - Wrapper ที่คลุมส่วนประกอบ 'หนึ่ง' ของ Component
-    * Children 
+    * Children (Inner children)
       - ส่วนประกอบที่อยู่ภายใน Minor wrapper
-5. ที่ไฟล์หลัก Component ให้สร้าง class ตาม Main wrapper, Minor wrapper และ Cnhildren ที่ออกแบบเอาไว้ ดูตัวอย่างโค้ดที่ [card.js](https://gist.github.com/Nattarat/54498d1d912632af9dc9660990068113#file-card-js)
-    * ให้สังเกตว่าที่ Main wrapper และ Minor wrapper จะมี classname กำกับอยู่ จุดประสงค์เพื่อทำให้ง่ายต่อการ
-6. ที่ไฟล์ styled.js (ชื่อ styled เพื่อสื่อว่าใช้ Styled Components) ให้เขียน SCSS ตาม Main wrapper, Minor wrapper และ Cnhildren ที่ออกแบบเอาไว้ ดูตัวอย่างโค้ดที่ [styled.js](https://gist.github.com/Nattarat/54498d1d912632af9dc9660990068113#file-styled-js)
-    * 
+5. ที่ไฟล์หลัก Component ให้สร้าง class ตาม Main wrapper, Minor wrapper และ Children ที่ออกแบบเอาไว้ ดูตัวอย่างโค้ดที่ [card.js](https://gist.github.com/Nattarat/54498d1d912632af9dc9660990068113#file-card-js)
+    * ให้สังเกตว่าที่ Main wrapper และ Minor wrapper จะมี classname กำกับอยู่ จุดประสงค์เพื่อทำให้ง่ายต่อการไล่โค้ดตอน inspector
+6. ที่ไฟล์ styled.js (ชื่อ styled เพื่อสื่อว่าใช้ Styled Components) ให้เขียน SCSS ตาม Main wrapper, Minor wrapper และ Children ที่ออกแบบเอาไว้ ดูตัวอย่างโค้ดที่ [styled.js](https://gist.github.com/Nattarat/54498d1d912632af9dc9660990068113#file-styled-js)
+    *
 
 ### How to create component document
 ### How to using component
