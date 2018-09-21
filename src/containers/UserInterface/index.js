@@ -2,8 +2,12 @@ import React from 'react'
 import ClassNames from 'classnames'
 import {
   Simple,
-  SimpleStatic
+  SimpleStatic,
+  Card
 } from 'components'
+import {
+  CONTENTS
+} from 'themes'
 
 export class UserInterfaceContainer extends React.Component {
   render() {
@@ -39,6 +43,15 @@ export class UserInterfaceContainer extends React.Component {
             </a>
           </SimpleStatic.Footer>
         </SimpleStatic>
+
+        <Card
+          avatarsSource={CONTENTS['avatar-1.jpg']}
+          name='Nattarat Srila'
+          rating='5.0'
+          country='Thailand'
+          chatMessageNumber='99'
+          footerMessage='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+        />
       </React.Fragment>
     )
   }

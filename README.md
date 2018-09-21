@@ -673,7 +673,7 @@ my-app
       - ไฟล์ที่ Export Component ไปใช้งาน
 
 ### How to create component
-1. ดาวน์โหลด [react component template](https://drive.google.com/open?id=1EkQQUN7L1i6cnUZMT4SNf6kvcVkHzF7K) เพื่อใช้เป็นตัวตั้งต้นในการสร้าง Component
+1. ดาวน์โหลด [react component template](https://drive.google.com/open?id=15cKYwENy6ok0O9Al98IkfkdoornUHv5l) เพื่อใช้เป็นตัวตั้งต้นในการสร้าง Component
 2. แตก zip และนำมาวางไว้ในโฟลเดอร์ components จากนั้น เปลี่ยนชื่อโฟลเดอร์และไฟล์หลักของ Component เป็นชื่อ Component ที่เราต้องการสร้าง(ตัวอย่างจะเปลี่ยนเป็น Card)
 ```
 my-app

@@ -83,6 +83,10 @@ injectGlobal`
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   input {
