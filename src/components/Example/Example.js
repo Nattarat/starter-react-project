@@ -13,6 +13,8 @@ import {
  * - Example component description
  */
 
+
+
 export class Example extends React.PureComponent {
   static defaultProps = {
     ui: 'primary'
@@ -20,55 +22,53 @@ export class Example extends React.PureComponent {
 
   static propTypes = { // TYPE > node, string, func, bool
     /**
-     * State/Modifier classname for change default UI
+    * Additional classes
     */
-    className: PropTypes.oneOf([
-      'is-error',
-      'is-success'
-    ]),
-    /** Description text */
-    description: PropTypes.string,
-    /** Additional element in component */
+    className: PropTypes.string,
+
+    /**
+    * Additional elements
+    */
     children: PropTypes.oneOfType([
       PropTypes.node,
       PropTypes.string
-    ])
+    ]),
+
+    /**
+    * Modifier name for change default UI
+    * note: use only for change many style of parent and children
+    */
+    ui: PropTypes.oneOf([
+      'error',
+      'success'
+    ]),
   }
 
 
   render () {
     const {
       className,
-      description,
       children,
       ui,
-      a,
-      b
+      color,
     } = this.props
 
     const uiClasses = ClassNames(ui)
-    const aClasses = ClassNames(a)
-    const bClasses = ClassNames(b)
+    const colorClasses = ClassNames(color)
 
     const Classes = ClassNames(
       'example',
+      { [`is-ui-${uiClasses}`]: uiClasses},
+      { [`is-color-${colorClasses}`]: colorClasses},
       className,
-      'is-ui-' + uiClasses,
-      'is-a-' + aClasses,
-      'is-b-' + bClasses
     )
 
-    console.log(ui)
-
     return (
-      <ExampleWrapper className={Classes}
+      <ExampleWrapper
+        className={Classes}
       >
-        <div className='starter-body'>
-          {description}
-        </div>
         {children}
       </ExampleWrapper>
     )
   }
 }
-
