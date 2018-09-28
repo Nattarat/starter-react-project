@@ -11,7 +11,9 @@ export class MainLayoutContainer extends React.Component {
     return (
       <React.Fragment>
         <h1>Main layout</h1>
-        <Example ui='error'>Example</Example>
+        <Example ui='error' flexAlign='horizontal-spacebetween'>
+          <Example.Children textColor='blue' bgColor='green'>Example</Example.Children>
+        </Example>
         <Link to='/ui'>
           <button>Go to UI page</button>
         </Link>

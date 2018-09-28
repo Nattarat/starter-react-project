@@ -1,6 +1,6 @@
 import {
   default as VARIABLES
-} from 'themes/styles/bases/variables'
+} from '../bases/variables' // Use relative path for React Styleguidist
 
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 // ==================================================================================================
@@ -9,7 +9,7 @@ import {
 // * Placeholder
 //
 // Using default:
-// ${MIXINS.PLACEHOLDER({});
+// ${MIXINS.PLACEHOLDER({})};
 //
 // Using parameters:
 // ${MIXINS.PLACEHOLDER({

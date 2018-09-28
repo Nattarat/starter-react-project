@@ -1,6 +1,6 @@
 import {
   default as VARIABLES
-} from 'themes/styles/bases/variables'
+} from '../bases/variables' // Use relative path for React Styleguidist
 
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 // ==================================================================================================
@@ -20,47 +20,47 @@ export default {
   // ==================================================================================================
   TEXT_COLORS: () => {
     return `
-      &.is-color-black {
+      &.is-textcolor-black {
         color: ${VARIABLES.COLORS.BLACK};
       }
 
-      &.is-color-white {
+      &.is-textcolor-white {
         color: ${VARIABLES.COLORS.WHITE};
       }
 
-      &.is-color-red {
+      &.is-textcolor-red {
         color: ${VARIABLES.COLORS.RED};
       }
 
-      &.is-color-green {
+      &.is-textcolor-green {
         color: ${VARIABLES.COLORS.GREEN};
       }
 
-      &.is-color-blue {
+      &.is-textcolor-blue {
         color: ${VARIABLES.COLORS.BLUE};
       }
 
-      &.is-color-text-head {
+      &.is-textcolor-text-head {
         color: ${VARIABLES.COLORS.TEXT_HEAD};
       }
 
-      &.is-color-text-sub-head {
+      &.is-textcolor-text-sub-head {
         color: ${VARIABLES.COLORS.TEXT_SUB_HEAD};
       }
 
-      &.is-color-text-detail {
+      &.is-textcolor-text-detail {
         color: ${VARIABLES.COLORS.TEXT_DETAIL};
       }
 
-      &.is-color-text-link {
+      &.is-textcolor-text-link {
         color: ${VARIABLES.COLORS.TEXT_LINK};
       }
 
-      &.is-color-validation-error {
+      &.is-textcolor-validation-error {
         color: ${VARIABLES.COLORS.VALIDATION_ERROR};
       }
 
-      &.is-color-validation-success {
+      &.is-textcolor-validation-success {
         color: ${VARIABLES.COLORS.VALIDATION_SUCCESS};
       }
     `
@@ -112,6 +112,24 @@ export default {
 
       &.is-bgcolor-validation-success {
         background-color: ${VARIABLES.COLORS.VALIDATION_SUCCESS};
+      }
+    `
+  },
+
+  // Flex aligns
+  // ==================================================================================================
+  FLEX_ALIGNS: () => {
+    return `
+      &.is-flexalign-horizontal-start {
+        justify-content: flex-start;
+      }
+
+      &.is-flexalign-horizontal-end {
+        justify-content: flex-end;
+      }
+
+      &.is-flexalign-horizontal-spacebetween {
+        justify-content: space-between;
       }
     `
   }

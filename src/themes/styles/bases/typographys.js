@@ -10,6 +10,8 @@ import {
 //
 // Typographys:
 //
+// Using: ${TYPOGRAPHYS.FONT_STYLES.FIRST_REGULAR_MN};
+//
 // * First regular (Prompt Regular)
 //   - FIRST_REGULAR_MN  (12px)
 //   - FIRST_REGULAR_TN  (14px)

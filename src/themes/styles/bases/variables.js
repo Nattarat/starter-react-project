@@ -16,8 +16,7 @@
 // * Border widths
 // * Border radiuses
 // * Box shadows
-// * Component widths
-// * Component heights
+// * Component width/height/others
 // * Spacings
 // * Paddings
 // * Margins
@@ -295,15 +294,12 @@ export default {
     SHADOW_1: '0 5px 5px rgba(0, 0, 0, .5)'
   },
 
-  // Component widths
+  // Component width/height/others
   // ============================================================
-  COMPONENT_WIDTHS: {
-  },
-
-  // Component heights
-  // ============================================================
-  COMPONENT_HEIGHTS: {
-  },
+  // AVATAR: {
+  //   WIDTH: '96px',
+  //   HEIGHT: '96px'
+  // },
 
   // Spacings
   // ============================================================
