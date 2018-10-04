@@ -5,26 +5,21 @@ import {
   ExampleWrapper
 } from './styled'
 
-/**
- * Example
- * - Example component description
- */
-
 class ExampleChildren extends React.PureComponent {
   render () {
     const {
-      textColor,
-      bgColor,
       className,
-      children
+      children,
+      fontColor,
+      bgColor
     } = this.props
 
     // props for css classes
-    const textColorClasses = ClassNames(textColor)
+    const fontColorClasses = ClassNames(fontColor)
     const bgColorClasses = ClassNames(bgColor)
     const classes = ClassNames(
       'example-children',
-      { [`is-textcolor-${textColorClasses}`]: textColorClasses },
+      { [`is-fontcolor-${fontColorClasses}`]: fontColorClasses },
       { [`is-bgcolor-${bgColorClasses}`]: bgColorClasses },
       className
     )
@@ -37,11 +32,10 @@ class ExampleChildren extends React.PureComponent {
   }
 }
 
-const TEST = [
-  'horizontal-start',
-  'horizontal-end',
-  'horizontal-spacebetween'
-]
+/**
+ * Example description
+ * - ...
+ */
 
 export class Example extends React.PureComponent {
   static defaultProps = {
@@ -50,7 +44,7 @@ export class Example extends React.PureComponent {
 
   static propTypes = { // TYPE > node, string, func, bool
     /**
-    * Modifier name for change default multiple UI (parent and children)
+    * [Example] and [Example.Children] - modifier name for change default multiple UI (parent and children)
     */
     ui: PropTypes.oneOf([
       'error',
@@ -58,44 +52,51 @@ export class Example extends React.PureComponent {
     ]),
 
     /**
-    * Modifier name for change default single UI (children)
-    */
-    // flexAlign: PropTypes.oneOf([
-    //   'horizontal-start',
-    //   'horizontal-end',
-    //   'horizontal-spacebetween'
-    // ]),
-
-    flexAlign: PropTypes.oneOf(TEST),
-
-    /**
-    * Additional classes
+    * [Example] and [Example.Children] - additional classes
     */
     className: PropTypes.string,
 
     /**
-    * Source icon (path/url)
-    */
-    srcIcon: PropTypes.string,
-
-    /**
-    * Additional elements
+    * [Example] and [Example.Children] - additional elements or text
     */
     children: PropTypes.oneOfType([
       PropTypes.node,
       PropTypes.string
-    ])
+    ]),
+
+    /**
+    * [Example] - children align
+    * , see enum at src/themes/styles/helpers/utilities.js
+    */
+    flexAlign: PropTypes.string,
+
+    /**
+    * [Example] - source icon (path/url)
+    */
+    srcIcon: PropTypes.string,
+
+    /**
+    * [Example.Children] - text color
+    * , see enum at src/themes/styles/helpers/utilities.js
+    */
+    fontColor: PropTypes.string,
+
+    /**
+    * [Example.Children] - background color
+    * , see enum at src/themes/styles/helpers/utilities.js
+    */
+    bgColor: PropTypes.string
   }
 
   static Children = ExampleChildren
 
   render () {
     const {
-      ui,
-      flexAlign,
       className,
-      srcIcon,
-      children
+      ui,
+      children,
+      flexAlign,
+      srcIcon
     } = this.props
 
     // props for css classes
@@ -103,7 +104,7 @@ export class Example extends React.PureComponent {
     const flexAlignClasses = ClassNames(flexAlign)
     const classes = ClassNames(
       'example',
-      { [`is-${uiClasses}`]: uiClasses },
+      { [`is-ui-${uiClasses}`]: uiClasses },
       { [`is-flexalign-${flexAlignClasses}`]: flexAlignClasses },
       className
     )

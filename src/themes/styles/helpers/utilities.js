@@ -6,11 +6,20 @@ import {
 // ==================================================================================================
 //
 // Utilities
-// * Text colors
-// * Background colors
+//
+// * Text / Background colors
+//   > black, white, red, green, blue
+//   > text-head, text-sub-head, text-detail, text-link
+//   > validation-error, validation-success
+//
+// * Flex aligns
+//   > left, right, center, spacebetween, top, bottom, middle, spacebetween-vertical
+//
+// * Flex vertical aligns
+//   > top, bottom, middle
 //
 // Using:
-// ${UTILITIES.TEXT_COLOR()};
+// ${UTILITIES.FONT_COLORS()};
 //
 // ==================================================================================================
 // //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -18,49 +27,49 @@ import {
 export default {
   // Text colors
   // ==================================================================================================
-  TEXT_COLORS: () => {
+  FONT_COLORS: () => {
     return `
-      &.is-textcolor-black {
+      &.is-fontcolor-black {
         color: ${VARIABLES.COLORS.BLACK};
       }
 
-      &.is-textcolor-white {
+      &.is-fontcolor-white {
         color: ${VARIABLES.COLORS.WHITE};
       }
 
-      &.is-textcolor-red {
-        color: ${VARIABLES.COLORS.RED};
+      &.is-fontcolor-red {
+        color: ${VARIABLES.COLORS.RED_1};
       }
 
-      &.is-textcolor-green {
-        color: ${VARIABLES.COLORS.GREEN};
+      &.is-fontcolor-green {
+        color: ${VARIABLES.COLORS.GREEN_1};
       }
 
-      &.is-textcolor-blue {
-        color: ${VARIABLES.COLORS.BLUE};
+      &.is-fontcolor-blue {
+        color: ${VARIABLES.COLORS.BLUE_1};
       }
 
-      &.is-textcolor-text-head {
+      &.is-fontcolor-text-head {
         color: ${VARIABLES.COLORS.TEXT_HEAD};
       }
 
-      &.is-textcolor-text-sub-head {
+      &.is-fontcolor-text-sub-head {
         color: ${VARIABLES.COLORS.TEXT_SUB_HEAD};
       }
 
-      &.is-textcolor-text-detail {
+      &.is-fontcolor-text-detail {
         color: ${VARIABLES.COLORS.TEXT_DETAIL};
       }
 
-      &.is-textcolor-text-link {
+      &.is-fontcolor-text-link {
         color: ${VARIABLES.COLORS.TEXT_LINK};
       }
 
-      &.is-textcolor-validation-error {
+      &.is-fontcolor-validation-error {
         color: ${VARIABLES.COLORS.VALIDATION_ERROR};
       }
 
-      &.is-textcolor-validation-success {
+      &.is-fontcolor-validation-success {
         color: ${VARIABLES.COLORS.VALIDATION_SUCCESS};
       }
     `
@@ -79,15 +88,15 @@ export default {
       }
 
       &.is-bgcolor-red {
-        background-color: ${VARIABLES.COLORS.RED};
+        background-color: ${VARIABLES.COLORS.RED_1};
       }
 
       &.is-bgcolor-green {
-        background-color: ${VARIABLES.COLORS.GREEN};
+        background-color: ${VARIABLES.COLORS.GREEN_1};
       }
 
       &.is-bgcolor-blue {
-        background-color: ${VARIABLES.COLORS.BLUE};
+        background-color: ${VARIABLES.COLORS.BLUE_1};
       }
 
       &.is-bgcolor-text-head {
@@ -120,16 +129,50 @@ export default {
   // ==================================================================================================
   FLEX_ALIGNS: () => {
     return `
-      &.is-flexalign-horizontal-start {
+      &.is-flexalign-left {
         justify-content: flex-start;
       }
-
-      &.is-flexalign-horizontal-end {
+      &.is-flexalign-right {
         justify-content: flex-end;
       }
-
-      &.is-flexalign-horizontal-spacebetween {
+      &.is-flexalign-center {
+        justify-content: center;
+      }
+      &.is-flexalign-spacebetween {
         justify-content: space-between;
+      }
+
+      &.is-flexalign-top {
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      &.is-flexalign-bottom {
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      &.is-flexalign-middle {
+        flex-direction: column;
+        justify-content: center;
+      }
+      &.is-flexalign-spacebetween-vertical {
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    `
+  },
+
+  // Flex vertical aligns
+  // ==================================================================================================
+  FLEX_ALIGN_ITEMS: () => {
+    return `
+      &.is-flexalign-vertical-top {
+        align-items: flex-start;
+      }
+      &.is-flexalign-vertical-bottom {
+        align-items: flex-end;
+      }
+      &.is-flexalign-vertical-middle {
+        align-items: center;
       }
     `
   }

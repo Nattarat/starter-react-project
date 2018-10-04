@@ -19,7 +19,7 @@
 * [Theme variables setting](#theme-variables-setting)
   - [Theme variables using](#theme-variables-using)
 * [How to setting path file for import](#how-to-setting-path-file-for-import)
-* [How to using other CSS framework in project](#how-to-using-other-css-framework-in-project)
+* [How to using vendor CSS framework in project](#how-to-using-vendor-css-framework-in-project)
   - [Vendor CSS framework setting](vendor-css-framework-setting)
 * [Design system setting](#design-system-settings)
   - [Design system: Colors](#design-system-colors)
@@ -251,7 +251,7 @@ my-app
     - variables: ตั้งค่าตัวแปรที่ใช้กับ Style ในโปรเจค เช่น Colors, Font families เป็นต้น
   * helpers: เก็บไฟล์สไตล์ที่สามารถนำไปใช้ซ้ำได้
     - mixins: เก็บ CSS ที่เป็น group properties ที่สามารถเปลี่ยนแปลงค่าได้
-    - utilities: เก็บ CSS ที่เป็น Modifier class เช่น color, background-color โดยสามารถนำไป map กับ class ของ Component/Global style ได้
+    - utilities: เก็บ CSS ที่เป็น Modifier class เช่น font/background color โดยสามารถนำไป map กับ class ของ Component/Global style ได้
   * layouts: เก็บไฟล์สไตล์ของ Page/Section และ Global
     - page: ไฟล์สไตล์ของ Page/Section โดยสร้างชื่อไฟล์และ Parent class เป็นชื่อ Page/Section นั้นๆ เช่น
       ```
@@ -384,16 +384,15 @@ export default {
   ${TYPOGRAPHYS.FONT_STYLES.FONT_FIRST_REGULAR_LG};
 
   // ไม่มี CSS property นำหน้าเพราะ เป็นการ import กลุ่มของ Modifier class เข้ามา
+  ${UTILITIES.BACKGROUND_COLORS()};
+
+  // มี CSS property นำหน้าเพราะ เป็นการ import ค่าเข้ามาใน CSS property
   ${MIXINS.PLACEHOLDER({
     color: ${VARIABLES.COLORS.TEXT_PLACEHOLDER}
   })};
 
-  ${UTILITIES.BACKGROUND_COLORS()};
-
-  // มี CSS property นำหน้าเพราะ เป็นการ import ค่าเข้ามาใน CSS property
   color: ${VARIABLES.COLORS.TEXT_LINK};
 }
-
 ```
 
 ## How to setting path file for import
@@ -409,7 +408,7 @@ import './themes/styles/bases/reset'
 // after
 import 'themes/styles/bases/reset'
 ```
-* ในกรณีของ Component จะเลือกใช้ src เป็น relative path เพื่อนำไปอ้่างอิงกับ Styleguidist ในการสร้าง Component document (ถ้าเป็น root path จะเกิด error ตอน run Styleguidist เนื่องจากหา file ไม่เจอ)
+* ในกรณีของ Component และไฟล์ที่เกี่ยวข้องจะเลือกใช้ src เป็น relative path เพื่อนำไปอ้่างอิงกับ Styleguidist ในการสร้าง Component document (ถ้าเป็น root path จะเกิด error ตอน run Styleguidist เนื่องจากหา file ไม่เจอ)
 ```
 // before
 import {

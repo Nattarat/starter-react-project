@@ -16,11 +16,7 @@
 // * Border widths
 // * Border radiuses
 // * Box shadows
-// * Component width/height/others
-// * Spacings
-// * Paddings
-// * Margins
-// * Grid Gutters
+// * Component width/height/padding/margin/others
 //
 // ==================================================================================================
 // //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -61,13 +57,13 @@ export default {
     WHITE: '#FFFFFF',
 
     // Red
-    RED: '#FF0000',
+    RED_1: '#CD5C5C',
 
     // Green
-    GREEN: '#00FF00',
+    GREEN_1: '#8FBC8F',
 
     // Blue
-    BLUE: '#0000FF',
+    BLUE_1: '#6495ED',
 
     // Gray
     GRAY_1: '#F7F7F7',
@@ -206,40 +202,44 @@ export default {
 
     // Tablet
     TABLET_XS: '768px',
-    TABLET_SM: '800px',
-    TABLET_MD: '812px',
+    TABLET_SM: '812px',
+    TABLET_MD: '896px',
     TABLET_LG: '1024px',
     // Max
-    TABLET_XS_MAX: '799px',
-    TABLET_SM_MAX: '811px',
+    TABLET_XS_MAX: '811px',
+    TABLET_SM_MAX: '895px',
     TABLET_MD_MAX: '1023px',
     TABLET_LG_MAX: '1279px',
     // Min
     TABLET_XS_MIN: '769px',
-    TABLET_SM_MIN: '801px',
-    TABLET_MD_MIN: '813px',
+    TABLET_SM_MIN: '813px',
+    TABLET_MD_MIN: '897px',
     TABLET_LG_MIN: '1025px',
 
-    // Desktop
-    DESKTOP_XS: '1280px',
-    DESKTOP_SM: '1366px',
-    DESKTOP_MD: '1440px',
-    DESKTOP_LG: '1600px',
-    DESKTOP_XL: '1920px',
-    DESKTOP_XXL: '2560px',
+    // Laptop
+    LAPTOP_XS: '1280px',
+    LAPTOP_SM: '1366px',
+    LAPTOP_MD: '1440px',
+    LAPTOP_LG: '1600px',
     // Max
-    DESKTOP_XS_MAX: '1365px',
-    DESKTOP_SM_MAX: '1439px',
-    DESKTOP_MD_MAX: '1599px',
-    DESKTOP_LG_MAX: '1919px',
-    DESKTOP_XL_MAX: '2559px',
+    LAPTOP_XS_MAX: '1365px',
+    LAPTOP_SM_MAX: '1439px',
+    LAPTOP_MD_MAX: '1599px',
+    LAPTOP_LG_MAX: '1919px',
     // Min
-    DESKTOP_XS_MIN: '1281px',
-    DESKTOP_SM_MIN: '1367px',
-    DESKTOP_MD_MIN: '1441px',
-    DESKTOP_LG_MIN: '1601px',
-    DESKTOP_XL_MIN: '1921px',
-    DESKTOP_XXL_MIN: '2561px'
+    LAPTOP_XS_MIN: '1281px',
+    LAPTOP_SM_MIN: '1367px',
+    LAPTOP_MD_MIN: '1441px',
+    LAPTOP_LG_MIN: '1601px',
+
+    // Desktop
+    DESKTOP_XS: '1920px',
+    DESKTOP_SM: '2560px',
+    // Max
+    DESKTOP_XS_MAX: '2559px',
+    // Min
+    DESKTOP_XS_MIN: '1921px',
+    DESKTOP_SM_MIN: '2561px'
   },
 
   // Transitions
@@ -299,49 +299,5 @@ export default {
   // AVATAR: {
   //   WIDTH: '96px',
   //   HEIGHT: '96px'
-  // },
-
-  // Spacings
-  // ============================================================
-  SPACINGS: {
-    MN:   `calc(${SPACING_FACTOR} * 1)`,  // 5px
-    TN:   `calc(${SPACING_FACTOR} * 2)`,  // 10px
-    XXS:  `calc(${SPACING_FACTOR} * 3)`,  // 15px
-    XS:   `calc(${SPACING_FACTOR} * 4)`,  // 20px
-    SM:   `calc(${SPACING_FACTOR} * 5)`,  // 25px
-    MD:   `calc(${SPACING_FACTOR} * 6)`,  // 30px
-    LG:   `calc(${SPACING_FACTOR} * 7)`,  // 35px
-    XL:   `calc(${SPACING_FACTOR} * 8)`,  // 40px
-    XXL:  `calc(${SPACING_FACTOR} * 9)`,  // 45px
-    BG:   `calc(${SPACING_FACTOR} * 10)`, // 50px
-    HG:   `calc(${SPACING_FACTOR} * 11)`, // 55px
-    MS:   `calc(${SPACING_FACTOR} * 12)`  // 60px
-  },
-
-  // Paddings
-  // ============================================================
-  PADDINGS: {
-  },
-
-  // Margins
-  // ============================================================
-  MARGINS: {
-  },
-
-  // Grid gutters
-  // ============================================================
-  GRID_GUTTERS: {
-    // MN:   'px',
-    // TN:   'px',
-    // XXS:  'px',
-    // XS:   'px',
-    // SM:   'px',
-    // MD:   'px',
-    // LG:   'px',
-    // XL:   'px',
-    // XXL:  'px',
-    // BG:   'px',
-    // HG:   'px',
-    // MS:   'px'
-  }
+  // }
 }

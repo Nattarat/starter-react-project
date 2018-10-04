@@ -29,7 +29,7 @@ export const ExampleWrapper = styled.div`
   }
 
   .example-children {
-    ${UTILITIES.TEXT_COLORS()};
+    ${UTILITIES.FONT_COLORS()};
     ${UTILITIES.BACKGROUND_COLORS()};
     ${MIXINS.ELLIPSIS({})};
     ${TYPOGRAPHYS.FONT_STYLES.FIRST_REGULAR_XS};
@@ -38,19 +38,19 @@ export const ExampleWrapper = styled.div`
 
   /* Modifiers for multiple UI
   ------------------------------- */
-  &.is-error,
-  &.is-success {
+  &.is-ui-error,
+  &.is-ui-success {
     .example-children {
       color: ${VARIABLES.COLORS.WHITE};
     }
   }
 
-  &.is-error {
-    background-color: ${VARIABLES.COLORS.RED};
+  &.is-ui-error {
+    background-color: ${VARIABLES.COLORS.RED_1};
   }
 
-  &.is-success {
-    background-color: ${VARIABLES.COLORS.GREEN};
+  &.is-ui-success {
+    background-color: ${VARIABLES.COLORS.GREEN_1};
   }
 
   /* Modifiers for single UI
@@ -60,7 +60,7 @@ export const ExampleWrapper = styled.div`
   /* For overwrite style from modifiers */
   &[class*='is'] {
     .example-children {
-      ${UTILITIES.TEXT_COLORS()};
+      ${UTILITIES.FONT_COLORS()};
     }
   }
 
