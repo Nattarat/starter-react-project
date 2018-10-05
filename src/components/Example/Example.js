@@ -39,7 +39,7 @@ class ExampleChildren extends React.PureComponent {
 
 export class Example extends React.PureComponent {
   static defaultProps = {
-    srcIcon: require('./styleguide-images/icon-example.svg')
+    srcIcon: require('./images/icon-example.svg')
   }
 
   static propTypes = { // TYPE > node, string, func, bool

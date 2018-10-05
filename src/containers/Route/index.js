@@ -22,8 +22,8 @@ export class RouteContainer extends React.Component {
     return (
       <React.Fragment>
         {/* Use props 'exact' for match single container(not share container) */}
-        <Route exact path="/" component={MainLayoutContainer} />
-        <Route exact path="/ui" component={UserInterfaceContainer} />
+        <Route exact path='/' component={MainLayoutContainer} />
+        <Route exact path='/ui' component={UserInterfaceContainer} />
       </React.Fragment>
     )
   }

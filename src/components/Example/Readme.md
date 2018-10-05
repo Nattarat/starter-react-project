@@ -37,7 +37,7 @@ Children alignment:
 Source icon:
 
 ```jsx
-<Example srcIcon={require('./styleguide-images/icon-info.svg')}>
+<Example srcIcon={require('./images/icon-info.svg')}>
   <Example.Children>Path</Example.Children>
 </Example>
 <br />
