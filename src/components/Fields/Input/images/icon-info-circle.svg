@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cd5c5c;
+      }
+    </style>
+  </defs>
+  <path id="icon-info-circle" class="cls-1" d="M9,2a7,7,0,1,0,7,7A7,7,0,0,0,9,2Zm.7,10.5H8.3V8.3H9.7Zm0-5.6H8.3V5.5H9.7Z" transform="translate(-2 -2)"/>
+</svg>

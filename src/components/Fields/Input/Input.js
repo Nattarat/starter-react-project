@@ -67,6 +67,7 @@ export class Input extends React.PureComponent {
       ui,
       className,
       children,
+      width,
       type,
       placeholder,
       name,
@@ -79,16 +80,27 @@ export class Input extends React.PureComponent {
       maxNumber,
       leftIconSource,
       leftIconClasses,
+      onClickLeftIcon,
       rightIconSource,
       rightIconClasses,
-      message
+      onClickRightIcon,
+      outerIconSource,
+      outerIconClasses,
+      onClickOuterIcon,
+      message,
+      onChange,
+      onFocus,
+      onBlur,
+      onKeyPress
     } = this.props
 
     // props for css classes
     const uiClasses = ClassNames(ui)
+    const widthClasses = ClassNames(width)
     const classes = ClassNames(
       'input',
       { [`is-ui-${uiClasses}`]: uiClasses },
+      { [`is-width-${widthClasses}`]: widthClasses },
       { [`is-icon-left`]: leftIconSource },
       { [`is-icon-right`]: rightIconSource },
       className
@@ -102,9 +114,10 @@ export class Input extends React.PureComponent {
           {
             leftIconSource &&
               <a className={ClassNames(
-                  'input-icon-button',
+                  'input-icon-button is-left',
                   {leftIconClasses}
                 )}
+                onClick={onClickLeftIcon}
               >
                 <img alt='Icon'
                   src={leftIconSource}
@@ -122,13 +135,18 @@ export class Input extends React.PureComponent {
             maxLength={maxlengthCharacter}
             min={minNumber}
             max={maxNumber}
+            onChange={onChange}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            onKeyPress={onKeyPress}
           />
           {
             rightIconSource &&
               <a className={ClassNames(
-                  'input-icon-button',
+                  'input-icon-button is-right',
                   {rightIconClasses}
                 )}
+                onClick={onClickRightIcon}
               >
                 <img alt='Icon'
                   src={rightIconSource}
@@ -136,6 +154,19 @@ export class Input extends React.PureComponent {
               </a>
           }
         </div>
+        {
+          outerIconSource &&
+            <a className={ClassNames(
+                'input-icon-button',
+                {outerIconClasses}
+              )}
+              onClick={onClickOuterIcon}
+            >
+              <img alt='Icon'
+                src={outerIconSource}
+              />
+            </a>
+        }
         {
           message &&
             <div className='input-message'>

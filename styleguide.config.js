@@ -20,7 +20,7 @@ module.exports = {
 					loader: 'file-loader',
 				},
 			],
-		},
+		}
   },
   require: [
     path.join(__dirname, 'public/css/styleguidist/reset.css'),

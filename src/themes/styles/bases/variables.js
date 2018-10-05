@@ -68,6 +68,8 @@ export default {
     // Gray
     GRAY_1: '#F7F7F7',
     GRAY_2: '#CCCCCC',
+    GRAY_3: '#BBBBBB',
+    GRAY_4: '#EEEEEE',
 
     // Role
     // ------------------------------
@@ -274,10 +276,10 @@ export default {
   // Border radiuses
   // ============================================================
   BORDER_RADIUSES: {
-    // MN:   'px',
-    // TN:   'px',
-    // XXS:  'px',
-    // XS:   'px',
+    MN:   '3px',
+    TN:   '5px',
+    XXS:  '7px',
+    XS:   '9px'
     // SM:   'px',
     // MD:   'px',
     // LG:   'px',
@@ -296,8 +298,14 @@ export default {
 
   // Component width/height/others
   // ============================================================
-  // AVATAR: {
-  //   WIDTH: '96px',
-  //   HEIGHT: '96px'
-  // }
+  INPUT: {
+    WIDTH: {
+      MN:   '75px',
+      TN:   '165px',
+      XXS:  '250px',
+      XS:   '350px',
+      SM:   '500px'
+    },
+    HEIGHT: '30px'
+  }
 }

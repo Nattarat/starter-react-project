@@ -5,12 +5,15 @@ import {
 import {
   Input
 } from 'components'
+import {
+  ICONS
+} from 'themes'
 
 export class MainLayoutContainer extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Input />
+        <Input width='mn' leftIconSource={ICONS['']} />
         <Link to='/ui'>
           <button>Go to UI page</button>
         </Link>
