@@ -3,12 +3,16 @@ import React from 'react'
 const Context = React.createContext()
 
 export let context = {}
+export let redirect = () => {}
 
 const setContext = (self) => {
   return {
     state: self.state,
     setContext: (setStateObj, callback) => {
       self.setState(setStateObj, callback)
+    },
+    setRedirect: (historyPush) => {
+      redirect = historyPush
     }
   }
 }

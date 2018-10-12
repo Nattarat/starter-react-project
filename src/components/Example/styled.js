@@ -36,8 +36,12 @@ export const ExampleWrapper = styled.div`
     color: ${VARIABLES.COLORS.BLACK};
   }
 
-  /* Modifiers for multiple UI
+  /* Modifiers
   ------------------------------- */
+  /* Flex align */
+  ${UTILITIES.FLEX_ALIGNS()};
+
+  /* UI */
   &.is-ui-error,
   &.is-ui-success {
     .example-children {
@@ -52,10 +56,6 @@ export const ExampleWrapper = styled.div`
   &.is-ui-success {
     background-color: ${VARIABLES.COLORS.GREEN_1};
   }
-
-  /* Modifiers for single UI
-  ------------------------------- */
-  ${UTILITIES.FLEX_ALIGNS()};
 
   /* For overwrite style from modifiers */
   &[class*='is'] {

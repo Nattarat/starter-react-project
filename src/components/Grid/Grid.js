@@ -8,6 +8,8 @@ class GridColumn extends React.PureComponent {
     const {
       className,
       children,
+      ui,
+      uiFor,
       flexCol,
       flexColMobile,
       flexColPhablet,
@@ -31,6 +33,8 @@ class GridColumn extends React.PureComponent {
     } = this.props
 
     // props for css classes
+    const uiClasses = ClassNames(ui)
+    const uiForClasses = ClassNames(uiFor)
     const flexColSizes = ClassNames(flexCol)
     const flexColMobileSizes = ClassNames(flexColMobile)
     const flexColPhabletSizes = ClassNames(flexColPhablet)
@@ -47,6 +51,8 @@ class GridColumn extends React.PureComponent {
     const colLargeDesktopSizes = ClassNames(colLargeDesktop)
     const classes = ClassNames(
       'grid-column',
+      { [`is-ui-${uiClasses}`]: uiClasses },
+      { [`is-ui-for-${uiClasses}`]: uiForClasses },
       { [`is-fluid-${flexColSizes}`]: flexColSizes },
       { [`is-fluid-${flexColMobileSizes}-mobile`]: flexColMobileSizes },
       { [`is-fluid-${flexColPhabletSizes}-phablet`]: flexColPhabletSizes },
@@ -108,6 +114,20 @@ export class Grid extends React.PureComponent {
     ]),
 
     /**
+    * [Grid] and [Grid.Column] - modifier class for change default multiple UI (parent or children), can reuse
+    */
+    ui: PropTypes.oneOf([
+      // props value
+    ]),
+
+    /**
+    * [Grid] and [Grid.Column] - modifier class for change default multiple UI (parent or children), can't reuse
+    */
+    uiFor: PropTypes.oneOf([
+      // props value
+    ]),
+
+    /**
     * [Grid]
     *
     * - horizontal gutter width(px)
@@ -163,6 +183,8 @@ export class Grid extends React.PureComponent {
     const {
       className,
       children,
+      ui,
+      uiFor,
       gutter,
       gutterMobile,
       gutterPhablet,
@@ -187,6 +209,8 @@ export class Grid extends React.PureComponent {
     } = this.props
 
     // props for css classes
+    const uiClasses = ClassNames(ui)
+    const uiForClasses = ClassNames(uiFor)
     const gutterSizes = ClassNames(gutter)
     const gutterMobileSizes = ClassNames(gutterMobile)
     const gutterPhabletSizes = ClassNames(gutterPhablet)
@@ -210,6 +234,8 @@ export class Grid extends React.PureComponent {
     const alignLargeDesktopDirection = ClassNames(alignLargeDesktop)
     const classes = ClassNames(
       'grid',
+      { [`is-ui-${uiClasses}`]: uiClasses },
+      { [`is-ui-for-${uiClasses}`]: uiForClasses },
       { [`is-gutter-${gutterSizes}`]: gutterSizes },
       { [`is-gutter-${gutterMobileSizes}-mobile`]: gutterMobileSizes },
       { [`is-gutter-${gutterPhabletSizes}-phablet`]: gutterPhabletSizes },

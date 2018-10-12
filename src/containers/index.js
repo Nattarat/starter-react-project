@@ -1,3 +1,4 @@
 export * from './Route'
 export * from './MainLayout'
-export * from './UserInterface'
+export * from './Home'
+export * from './Page'

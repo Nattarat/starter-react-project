@@ -7,6 +7,7 @@ import {
 //
 // Mixins
 // * Placeholder
+// * Ellipsis
 //
 // Using default:
 // ${MIXINS.PLACEHOLDER({})};
@@ -23,7 +24,7 @@ export default {
   // Placeholder
   // ==================================================================================================
   PLACEHOLDER: ({
-    color = VARIABLES.COLORS.BLACK,
+    color = VARIABLES.COLORS.TEXT_PLACEHOLDER,
   }) => {
     return `
       &::-moz-placeholder {

@@ -25,9 +25,7 @@ export const ContainerWrapper = styled.div`
 
   /* Child element styles
   ------------------------------- */
-  /* Modifiers for multiple UI
-  ------------------------------- */
-  /* Modifiers for single UI
+  /* Modifiers
   ------------------------------- */
   /* Flex align */
   ${UTILITIES.FLEX_ALIGNS()};

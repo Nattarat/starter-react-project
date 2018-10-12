@@ -4,27 +4,29 @@ import {
 } from 'react-router-dom'
 import {
   MainLayoutContainer,
-  UserInterfaceContainer
+  HomeContainer,
+  PageContainer
 } from 'containers'
 import {
   context
 } from 'context'
+import {
+  ROUTE_PATH
+} from 'helpers'
 
 export class RouteContainer extends React.Component {
   constructor(props){
     super(props)
-    context.setContext({
-      routeHistory: this.props.history
-    })
+    context.setRedirect(this.props.history.push)
   }
 
   render() {
     return (
-      <React.Fragment>
+      <MainLayoutContainer>
         {/* Use props 'exact' for match single container(not share container) */}
-        <Route exact path='/' component={MainLayoutContainer} />
-        <Route exact path='/ui' component={UserInterfaceContainer} />
-      </React.Fragment>
+        <Route exact path='/' component={HomeContainer} />
+        <Route exact path={ROUTE_PATH.PAGE.LINK} component={PageContainer} />
+      </MainLayoutContainer>
     )
   }
 }

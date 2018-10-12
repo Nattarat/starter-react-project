@@ -5,9 +5,9 @@ import {
 import {
   default as TYPOGRAPHYS
 } from '../../../themes/styles/bases/typographys'
-// import {
-//   default as MIXINS
-// } from '../../../themes/styles/helpers/mixins'
+import {
+  default as MIXINS
+} from '../../../themes/styles/helpers/mixins'
 // import {
 //   default as UTILITIES
 // } from '../../../themes/styles/helpers/utilities'
@@ -24,17 +24,19 @@ export const InputWrapper = styled.div`
   ------------------------------- */
   .input-group {
     position: relative;
+    flex: 1;
   }
 
   .input-field {
     ${TYPOGRAPHYS.FONT_STYLES.FIRST_REGULAR_TN};
+    ${MIXINS.PLACEHOLDER({})};
     transition: ${VARIABLES.TRANSITIONS.DEFAULT};
     width: 100%;
     height: ${VARIABLES.INPUT.HEIGHT};
     padding-left: 10px;
     padding-right: 10px;
     border: 1px solid ${VARIABLES.COLORS.GRAY_2};
-    border-radius: ${VARIABLES.BORDER_RADIUSES.MN};
+    border-radius: ${VARIABLES.INPUT.BORDER_RADIUS};
 
     &:focus {
       border-color: ${VARIABLES.COLORS.GRAY_3};
@@ -43,21 +45,43 @@ export const InputWrapper = styled.div`
   }
 
   .input-icon-button {
-    position: absolute;
-    z-index: ${VARIABLES.Z_INDEXS.LV_1};
-    display: block;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: ${VARIABLES.INPUT_ICON_BUTTON.WIDTH};
+    height: ${VARIABLES.INPUT_ICON_BUTTON.HEIGHT};
+
+    &.is-left,
+    &.is-right {
+      position: absolute;
+      z-index: ${VARIABLES.Z_INDEXS.LV_1};
+      top: 0;
+    }
+
+    &.is-outer {
+      flex: none;
+    }
   }
+
+  .input-icon-button-image {}
 
   .input-message {
+    ${TYPOGRAPHYS.FONT_STYLES.FIRST_REGULAR_MN};
     width: 100%;
+    padding-top: 3px;
   }
 
-  /* Modifiers for multiple UI
+  /* Modifiers
   ------------------------------- */
   /* Status */
   &.is-ui-error {
     .input-field {
       border-color: ${VARIABLES.COLORS.VALIDATION_ERROR};
+    }
+
+    .input-message {
+      color: ${VARIABLES.COLORS.VALIDATION_ERROR};
     }
   }
 
@@ -65,12 +89,20 @@ export const InputWrapper = styled.div`
     .input-field {
       border-color: ${VARIABLES.COLORS.VALIDATION_SUCCESS};
     }
+
+    .input-message {
+      color: ${VARIABLES.COLORS.VALIDATION_SUCCESS};
+    }
   }
 
   &.is-ui-disabled {
     .input-field {
       pointer-events: none;
       background-color: ${VARIABLES.COLORS.GRAY_4};
+    }
+
+    .input-message {
+      color: ${VARIABLES.COLORS.GRAY_4};
     }
   }
 
@@ -102,19 +134,29 @@ export const InputWrapper = styled.div`
 
   /* Icon */
   &.is-icon-left {
+    .input-icon-button {
+      &.is-left {
+        left: 0;
+      }
+    }
+
     .input-field {
-      padding-left: 45px;
+      padding-left: ${VARIABLES.INPUT.PADDINGS.ICON_BUTTON_SPACING};
     }
   }
 
   &.is-icon-right {
+    .input-icon-button {
+      &.is-right {
+        right: 0;
+      }
+    }
+
     .input-field {
-      padding-right: 45px;
+      padding-right: ${VARIABLES.INPUT.PADDINGS.ICON_BUTTON_SPACING};
     }
   }
 
-  /* Modifiers for single UI
-  ------------------------------- */
   /* Media queries
   ------------------------------- */
 `

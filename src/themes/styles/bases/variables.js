@@ -13,10 +13,7 @@
 // * Breakpoints
 // * Transitions
 // * Animation timings
-// * Border widths
-// * Border radiuses
-// * Box shadows
-// * Component width/height/padding/margin/others
+// * Component width/height/padding/margin/border-width-radius/box-shadow
 //
 // ==================================================================================================
 // //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -87,8 +84,7 @@ export default {
     // Overlay
     OVERLAY_1: 'rgba(0, 0, 0, 0.75)'
 
-    // Specific (for unique color in design)
-    // ------------------------------
+    // Specific or Unique
   },
 
   // Font families
@@ -256,46 +252,6 @@ export default {
     ELASTIC: 'cubic-bezier(.835, -.005, .06, 1)'
   },
 
-  // Border widths
-  // ============================================================
-  BORDER_WIDTHS: {
-    // MN:   'px',
-    // TN:   'px',
-    // XXS:  'px',
-    // XS:   'px',
-    // SM:   'px',
-    // MD:   'px',
-    // LG:   'px',
-    // XL:   'px',
-    // XXL:  'px',
-    // BG:   'px',
-    // HG:   'px',
-    // MS:   'px'
-  },
-
-  // Border radiuses
-  // ============================================================
-  BORDER_RADIUSES: {
-    MN:   '3px',
-    TN:   '5px',
-    XXS:  '7px',
-    XS:   '9px'
-    // SM:   'px',
-    // MD:   'px',
-    // LG:   'px',
-    // XL:   'px',
-    // XXL:  'px',
-    // BG:   'px',
-    // HG:   'px',
-    // MS:   'px'
-  },
-
-  // Box shadows
-  // ============================================================
-  BOX_SHADOWS: {
-    SHADOW_1: '0 5px 5px rgba(0, 0, 0, .5)'
-  },
-
   // Component width/height/others
   // ============================================================
   INPUT: {
@@ -306,6 +262,15 @@ export default {
       XS:   '350px',
       SM:   '500px'
     },
+    HEIGHT: '30px',
+    PADDINGS: {
+      ICON_BUTTON_SPACING: '30px'
+    },
+    BORDER_RADIUS: '3px'
+  },
+
+  INPUT_ICON_BUTTON: {
+    WIDTH: '30px',
     HEIGHT: '30px'
   }
 }

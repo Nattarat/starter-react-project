@@ -9,12 +9,18 @@ class ContainerContent extends React.PureComponent {
   render () {
     const {
       className,
-      children
+      children,
+      ui,
+      uiFor
     } = this.props
 
     // props for css classes
+    const uiClasses = ClassNames(ui)
+    const uiForClasses = ClassNames(uiFor)
     const classes = ClassNames(
       'container',
+      { [`is-ui-${uiClasses}`]: uiClasses },
+      { [`is-ui-for-${uiForClasses}`]: uiForClasses },
       className
     )
 
@@ -32,14 +38,7 @@ class ContainerContent extends React.PureComponent {
  */
 
 export class Container extends React.PureComponent {
-  static propTypes = { // TYPE > node, string, func, bool
-    /**
-    * [Container] and [Container.Content] - modifier name for change default multiple UI (parent and children)
-    */
-    // ui: PropTypes.oneOf([
-    //   // props value
-    // ]),
-
+  static propTypes = { // TYPE > node, string, func,
     /**
     * [Container] and [Container.Content] - additional classes
     */
@@ -51,6 +50,20 @@ export class Container extends React.PureComponent {
     children: PropTypes.oneOfType([
       PropTypes.node,
       PropTypes.string
+    ]),
+
+    /**
+    * [Container] and [Container.Content] - modifier class for change default multiple UI (parent or children), can reuse
+    */
+    ui: PropTypes.oneOf([
+      // props value
+    ]),
+
+    /**
+    * [Container] and [Container.Content] - modifier class for change default multiple UI (parent or children), can't reuse
+    */
+    uiFor: PropTypes.oneOf([
+      // props value
     ]),
 
     /**
@@ -109,9 +122,10 @@ export class Container extends React.PureComponent {
 
   render () {
     const {
-      ui,
       className,
       children,
+      ui,
+      uiFor,
       width,
       height,
       padding,
@@ -121,6 +135,7 @@ export class Container extends React.PureComponent {
 
     // props for css classes
     const uiClasses = ClassNames(ui)
+    const uiForClasses = ClassNames(uiFor)
     const widthClasses = ClassNames(width)
     const heightClasses = ClassNames(height)
     const paddingClasses = ClassNames(padding)
@@ -129,6 +144,7 @@ export class Container extends React.PureComponent {
     const classes = ClassNames(
       'container',
       { [`is-ui-${uiClasses}`]: uiClasses },
+      { [`is-ui-for-${uiForClasses}`]: uiForClasses },
       { [`is-width-${widthClasses}`]: widthClasses },
       { [`is-height-${heightClasses}`]: heightClasses },
       { [`is-padding-${paddingClasses}`]: paddingClasses },
