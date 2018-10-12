@@ -99,7 +99,7 @@ class GridColumn extends React.PureComponent {
  */
 
 export class Grid extends React.PureComponent {
-  static propTypes = { // TYPE > node, string, func, bool
+  static propTypes = { // TYPE > node, string, number, bool, array, object, symbol, func
     /**
     * [Grid] and [Grid.Column] - additional classes
     */

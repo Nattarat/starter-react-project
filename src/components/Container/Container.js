@@ -38,7 +38,7 @@ class ContainerContent extends React.PureComponent {
  */
 
 export class Container extends React.PureComponent {
-  static propTypes = { // TYPE > node, string, func,
+  static propTypes = { // TYPE > node, string, number, bool, array, object, symbol, func
     /**
     * [Container] and [Container.Content] - additional classes
     */

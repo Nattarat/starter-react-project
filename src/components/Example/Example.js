@@ -48,7 +48,7 @@ export class Example extends React.PureComponent {
     srcIcon: require('./images/icon-example.svg')
   }
 
-  static propTypes = { // TYPE > node, string, func, bool
+  static propTypes = { // TYPE > node, string, number, bool, array, object, symbol, func
     /**
     * [Example] and [Example.Children] - additional classes
     */

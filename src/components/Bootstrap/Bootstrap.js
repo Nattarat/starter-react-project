@@ -13,7 +13,7 @@ import {
  */
 
 export class Bootstrap extends React.PureComponent {
-  static propTypes = { // TYPE > node, string, func, bool
+  static propTypes = { // TYPE > node, string, number, bool, array, object, symbol, func
     /**
     * [Bootstrap] and [Bootstrap.Children] - additional elements or text
     */

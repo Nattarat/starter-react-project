@@ -18,7 +18,7 @@ export class Input extends React.PureComponent {
     outerIconWidth: '14px'
   }
 
-  static propTypes = { // TYPE > node, string, func,
+  static propTypes = { // TYPE > node, string, number, bool, array, object, symbol, func
     /**
     * [Input] - additional classes
     */
